@@ -1,0 +1,7 @@
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\BusinessLayer\bin\Debug\BusinessLayer.dll
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\BusinessLayer\bin\Debug\BusinessLayer.pdb
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\BusinessLayer\bin\Debug\DataAcces.dll
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\BusinessLayer\bin\Debug\DataAcces.pdb
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\BusinessLayer\obj\Debug\BusinessLayer.dll
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\BusinessLayer\obj\Debug\BusinessLayer.pdb

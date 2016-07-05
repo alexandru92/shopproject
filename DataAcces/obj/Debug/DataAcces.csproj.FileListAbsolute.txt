@@ -1,0 +1,7 @@
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataAcces\bin\Debug\DataAcces.dll
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataAcces\bin\Debug\DataAcces.pdb
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataAcces\bin\Debug\DataContracts.dll
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataAcces\bin\Debug\DataContracts.pdb
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataAcces\obj\Debug\DataAcces.csprojResolveAssemblyReference.cache
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataAcces\obj\Debug\DataAcces.dll
+c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataAcces\obj\Debug\DataAcces.pdb
