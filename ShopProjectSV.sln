@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcces", "DataAcces\Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContracts", "DataContracts\DataContracts.csproj", "{83EBC8A4-CCB0-45B3-824D-27BD72CD1A55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogHelper", "LogHelper\LogHelper.csproj", "{4C3AD01B-D975-452E-9796-56F5D3308E54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{83EBC8A4-CCB0-45B3-824D-27BD72CD1A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83EBC8A4-CCB0-45B3-824D-27BD72CD1A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83EBC8A4-CCB0-45B3-824D-27BD72CD1A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C3AD01B-D975-452E-9796-56F5D3308E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C3AD01B-D975-452E-9796-56F5D3308E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C3AD01B-D975-452E-9796-56F5D3308E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C3AD01B-D975-452E-9796-56F5D3308E54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

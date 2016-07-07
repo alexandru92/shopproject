@@ -20,3 +20,7 @@ c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\S
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\ShopProjectSV\obj\Debug\ShopProjectSV.csprojResolveAssemblyReference.cache
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\ShopProjectSV\obj\Debug\ShopProjectSV.dll
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\ShopProjectSV\obj\Debug\ShopProjectSV.pdb
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\ShopProjectSV\bin\DataAcces.dll
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\ShopProjectSV\bin\DataContracts.dll
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\ShopProjectSV\bin\DataAcces.pdb
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\ShopProjectSV\bin\DataContracts.pdb

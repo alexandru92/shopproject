@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLayer
+namespace DataContracts.Models.iModels
 {
-    public class Class1
+    public interface IAddress
     {
+        List<Address> getAddress(Address address);
     }
 }

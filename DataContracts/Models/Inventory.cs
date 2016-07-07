@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataContracts.Models
 {
-    class OrderDetailModel
+   public class Inventory
     {
-        public int OrderDetailID { get; set; }
-        public int ProductID { get; set; }
-        public int OrderID { get; set; }
+        public int InventoryID { get; set; }
         public int Quantity { get; set; }
-        public decimal Price { get; set; }
+        public int ProductID { get; set; }
     }
+
 }

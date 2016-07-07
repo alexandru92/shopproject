@@ -5,3 +5,7 @@ c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\B
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\BusinessLayer\obj\Debug\BusinessLayer.dll
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\BusinessLayer\bin\Debug\DataContracts.dll
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\BusinessLayer\bin\Debug\LogHelper.dll
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\BusinessLayer\bin\Debug\DataContracts.pdb
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\BusinessLayer\bin\Debug\LogHelper.pdb

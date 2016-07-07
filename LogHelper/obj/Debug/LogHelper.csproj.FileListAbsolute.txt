@@ -1,0 +1,5 @@
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\LogHelper\bin\Debug\LogHelper.dll
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\LogHelper\bin\Debug\LogHelper.pdb
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\LogHelper\obj\Debug\LogHelper.csprojResolveAssemblyReference.cache
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\LogHelper\obj\Debug\LogHelper.dll
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\LogHelper\obj\Debug\LogHelper.pdb
