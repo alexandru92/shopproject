@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace DataContracts.Models.IModels
 {
-    public interface ICustomerOrder
+    public class NewCustomer
     {
-        List<CustomerOrder> getCustomerOrder(CustomerOrder customerorder);
-        
+        public CustomerAndAddress newcustomer { get; set; }
     }
 }

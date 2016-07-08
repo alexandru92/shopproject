@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="CustomerService.cs" />
     <Compile Include="IBusinessLayer\ICustomersService.cs" />
+    <Compile Include="IBusinessLayer\IOrderService.cs" />
+    <Compile Include="OrderService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

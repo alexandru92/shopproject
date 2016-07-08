@@ -5,3 +5,5 @@ c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\D
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataAcces\obj\Debug\DataAcces.csprojResolveAssemblyReference.cache
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataAcces\obj\Debug\DataAcces.dll
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataAcces\obj\Debug\DataAcces.pdb
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\DataAcces\bin\Debug\LogHelper.dll
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\DataAcces\bin\Debug\LogHelper.pdb

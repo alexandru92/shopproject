@@ -42,13 +42,15 @@
   <ItemGroup>
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerAndAddress.cs" />
     <Compile Include="Models\CustomerOrder.cs" />
-    <Compile Include="Models\IModels\IAddressManager.cs" />
-    <Compile Include="Models\IModels\ICustomerManager.cs" />
-    <Compile Include="Models\IModels\ICustomerOrderManager.cs" />
-    <Compile Include="Models\IModels\IInventoryManager.cs" />
-    <Compile Include="Models\IModels\IProductManager.cs" />
-    <Compile Include="Models\IModels\OrderDetailsManager.cs" />
+    <Compile Include="Models\IModels\IAddress.cs" />
+    <Compile Include="Models\IModels\ICustomer.cs" />
+    <Compile Include="Models\IModels\ICustomerOrder.cs" />
+    <Compile Include="Models\IModels\IInventory.cs" />
+    <Compile Include="Models\IModels\IProduct.cs" />
+    <Compile Include="Models\NewCustomer.cs" />
+    <Compile Include="Models\IModels\OrderDetails.cs" />
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\Product.cs" />

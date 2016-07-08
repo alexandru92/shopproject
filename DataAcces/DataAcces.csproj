@@ -41,14 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetCustomers.cs" />
+    <Compile Include="CustomerRepository.cs" />
     <Compile Include="IDataAcces\ICustomerRepository.cs" />
+    <Compile Include="IDataAcces\IOrderRepository.cs" />
+    <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataContracts\DataContracts.csproj">
       <Project>{83ebc8a4-ccb0-45b3-824d-27bd72cd1a55}</Project>
       <Name>DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogHelper\LogHelper.csproj">
+      <Project>{4c3ad01b-d975-452e-9796-56f5d3308e54}</Project>
+      <Name>LogHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

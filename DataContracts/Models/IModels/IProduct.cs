@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataContracts.Models.IModels
 {
-    public interface IProductManager
+    public interface IProduct
     {
         List<Product> getProduct(Product product);
     }

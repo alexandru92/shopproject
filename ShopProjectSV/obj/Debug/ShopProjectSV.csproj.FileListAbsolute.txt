@@ -24,3 +24,5 @@ C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\S
 C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\ShopProjectSV\bin\DataContracts.dll
 C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\ShopProjectSV\bin\DataAcces.pdb
 C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\ShopProjectSV\bin\DataContracts.pdb
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\ShopProjectSV\bin\LogHelper.dll
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\ShopProjectSV\bin\LogHelper.pdb
