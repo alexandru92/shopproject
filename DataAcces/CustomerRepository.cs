@@ -13,14 +13,12 @@ namespace DataAcces
 {
     public class CustomerRepository
     {
-        Address address = new Address();
-
+        LogHelper hlp = new LogHelper();
         public List<Customer> getCustomer()
         {
-            LogHelper hlp = new LogHelper();
-            Customer cust = new Customer();
-            Address address = new Address();
-
+           
+            
+            
             string conStr = ConfigurationManager.ConnectionStrings["ShopProjectSV"].ConnectionString;
             DataTable table = null;
             using (SqlConnection con = new SqlConnection(conStr))
@@ -38,6 +36,7 @@ namespace DataAcces
                         using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                         {
                             table = new DataTable();
+
                             da.Fill(table);
                         }
                     }
@@ -46,50 +45,65 @@ namespace DataAcces
                         hlp.LogError(ex);
                     }
                 }
-                NewCustomer customerandaddress = new NewCustomer();
-                CustomerAndAddress custandaddresslist = new CustomerAndAddress();
 
                 List<Customer> custlist = new List<Customer>();
-                List<Address> addresslist = new List<Address>();
 
-                DateTime date = new DateTime();
-                string formatdate = date.ToString("dd-MM-yyyy");
+                //DateTime date = new DateTime();
+                //string formatdate = date.ToString("dd-MM-yyyy");
                 foreach (DataRow row in table.Rows)
                 {
-                    
-                    //custandaddresslist.customer.FirstName = row["FirstName"].ToString();
-                    //custandaddresslist.customer.LastName = row["LastName"].ToString();
-                    //custandaddresslist.customer.PhoneNumber = row["PhoneNumber"].ToString();
-                    //custandaddresslist.customer.DateBirth = Convert.ToDateTime(row["DateBirth"]);
-                    //custandaddresslist.address.City = row["City"].ToString();
-                    //custandaddresslist.address.Street = row["Street"].ToString();
-                    //custandaddresslist.address.Country = row["Country"].ToString();
-                    //cust.CustomerID = Convert.ToInt32(row["CustomerID"]);
-                    //cust.CustomerAddress.AddressID = Convert.ToInt32(row["AddressID"]);
+                    Customer cust = new Customer();
+                    cust.address = new Address();
                     cust.FirstName = row["FirstName"].ToString();
                     cust.LastName = row["LastName"].ToString();
                     cust.PhoneNumber = row["PhoneNumber"].ToString();
                     cust.DateBirth = Convert.ToDateTime(row["DateBirth"]);
-                    //cust.address.City = row["City"].ToString();
-                    //cust.address.Street = row["Street"].ToString();
-                    //cust.address.Country = row["Country"].ToString();
+                    cust.address.City = row["City"].ToString();
+                    cust.address.Street = row["Street"].ToString();
+                    cust.address.Country = row["Country"].ToString();
                     custlist.Add(cust);
-                    
-
                 }
                 return custlist;
             }
         }
 
-        //public CustomerRepository getCustomer()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         public void AddCustomer(Customer cust)
         {
-
+            
+            string conStr = ConfigurationManager.ConnectionStrings["ShopProjectSV"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = con.CreateCommand())
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spAddCustomer";
+                    cmd.Parameters.AddWithValue("@FirstName", cust.FirstName);
+                    cmd.Parameters.AddWithValue("@LastName", cust.LastName);
+                    cmd.Parameters.AddWithValue("@DateBirth", cust.DateBirth);
+                    cmd.Parameters.AddWithValue("@PhoneNumber", cust.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@Street", cust.address.Street);
+                    cmd.Parameters.AddWithValue("@City", cust.address.City);
+                    cmd.Parameters.AddWithValue("@Country", cust.address.Country);
+                    try
+                    {
+                        if (con.State != ConnectionState.Open)
+                        {
+                            con.Open();
+                        }
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        hlp.LogError(ex);
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+                }
+            }
         }
+
         public void UpdateCustomer(Customer cust)
         {
 

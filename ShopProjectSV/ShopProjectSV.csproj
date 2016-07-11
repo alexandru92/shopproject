@@ -76,6 +76,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Style\StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +101,10 @@
     <ProjectReference Include="..\DataContracts\DataContracts.csproj">
       <Project>{83EBC8A4-CCB0-45B3-824D-27BD72CD1A55}</Project>
       <Name>DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogHelper\LogHelper.csproj">
+      <Project>{4c3ad01b-d975-452e-9796-56f5d3308e54}</Project>
+      <Name>LogHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
