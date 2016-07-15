@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Customers.aspx.cs" Inherits="ShopProjectSV.Customers" %>
+
 <link href="Style/Style.css" rel="stylesheet" type="text/css" />
 <!DOCTYPE html>
 
@@ -14,7 +15,7 @@
                 <Columns>
                     <asp:TemplateField HeaderText="Select">
                         <ItemTemplate>
-                            <asp:CheckBox ID="chk" runat="server" />
+                            <asp:CheckBox ID="chk" OnCheckedChanged="GetSelectedRecords" runat="server" />
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName"></asp:BoundField>
@@ -24,7 +25,7 @@
                     <asp:BoundField DataField="address.City" HeaderText="City" SortExpression="City"></asp:BoundField>
                     <asp:BoundField DataField="address.Street" HeaderText="Street" SortExpression="Street"></asp:BoundField>
                     <asp:BoundField DataField="address.Country" HeaderText="Country" SortExpression="Country"></asp:BoundField>
-                 <asp:ButtonField HeaderText="Customer details" Text="Details" />
+                    <asp:ButtonField HeaderText="Customer details" Text="Details" />
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White"></FooterStyle>
@@ -36,6 +37,19 @@
                 <SortedAscendingHeaderStyle BackColor="#6D95E1"></SortedAscendingHeaderStyle>
                 <SortedDescendingCellStyle BackColor="#E9EBEF"></SortedDescendingCellStyle>
                 <SortedDescendingHeaderStyle BackColor="#4870BE"></SortedDescendingHeaderStyle>
+            </asp:GridView>
+
+           <asp:Button runat="server" ID="getSelectedDetailsbtn" Text="Get selected row details" OnClick="GetSelectedRecords" />
+            <asp:GridView ID="gridviewSelectedCustomerRow" runat="server" HeaderStyle-BackColor="Tomato" HeaderStyle-ForeColor="Wheat" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName"></asp:BoundField>
+                    <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName"></asp:BoundField>
+                  <%--  <asp:BoundField DataField="DateBirth" HeaderText="DateBirth" SortExpression="DateBirth" DataFormatString="{0:MM/dd/yyyy}"></asp:BoundField>
+                    <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber"></asp:BoundField>
+                    <asp:BoundField DataField="address.City" HeaderText="City" SortExpression="City"></asp:BoundField>
+                    <asp:BoundField DataField="address.Street" HeaderText="Street" SortExpression="Street"></asp:BoundField>
+                    <asp:BoundField DataField="address.Country" HeaderText="Country" SortExpression="Country"></asp:BoundField>--%>
+                </Columns>
             </asp:GridView>
             <ul id="addlistcss">
                 <li>First name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -52,10 +66,13 @@
             <asp:TextBox ID="streettb" runat="server" Width="147px"></asp:TextBox></li>
                 <li>Country&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="countrytb" runat="server" Width="147px"></asp:TextBox></li>
-                
+
             </ul>
             <br />
             <asp:Button ID="AddCustomer" runat="server" Text="Add Customer" OnClick="AddCustomer_Click" />
+            <br />
+            <asp:Label ID="FirstName" Text='<%#Eval("FirstName") %>' runat="server"></asp:Label><br />
+
         </div>
     </form>
 </body>

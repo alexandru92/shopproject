@@ -11,5 +11,6 @@ namespace DataContracts.Models
         public int CustomerOrderID { get; set; }
         public int CustomerID { get; set; }
         public int Total { get; set; }
+        public Customer custorderdetails { get; set; }
     }
 }

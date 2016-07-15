@@ -16,9 +16,6 @@ namespace DataAcces
         LogHelper hlp = new LogHelper();
         public List<Customer> getCustomer()
         {
-           
-            
-            
             string conStr = ConfigurationManager.ConnectionStrings["ShopProjectSV"].ConnectionString;
             DataTable table = null;
             using (SqlConnection con = new SqlConnection(conStr))
@@ -27,6 +24,7 @@ namespace DataAcces
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = "spGetAllCustomers";
+                    //cmd.Parameters.AddWithValue("@CustomerOrderID");
                     try
                     {
                         if (con.State != ConnectionState.Open)
@@ -47,9 +45,6 @@ namespace DataAcces
                 }
 
                 List<Customer> custlist = new List<Customer>();
-
-                //DateTime date = new DateTime();
-                //string formatdate = date.ToString("dd-MM-yyyy");
                 foreach (DataRow row in table.Rows)
                 {
                     Customer cust = new Customer();
@@ -67,9 +62,54 @@ namespace DataAcces
             }
         }
 
+        public List<CustomerOrder> getOrderByCustomerID()
+        {
+            string conStr = ConfigurationManager.ConnectionStrings["ShopProjectSV"].ConnectionString;
+            DataTable table = null;
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = con.CreateCommand())
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spGetAllOrdersByCustomerID";
+                    //cmd.Parameters.AddWithValue("@CustomerOrderID");
+                    try
+                    {
+                        if (con.State != ConnectionState.Open)
+                        {
+                            con.Open();
+                        }
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                        {
+                            table = new DataTable();
+
+                            da.Fill(table);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        hlp.LogError(ex);
+                    }
+                }
+
+                List<CustomerOrder> custorderlist = new List<CustomerOrder>();
+
+                //DateTime date = new DateTime();
+                //string formatdate = date.ToString("dd-MM-yyyy");
+                foreach (DataRow row in table.Rows)
+                {
+                    CustomerOrder custorder = new CustomerOrder();
+                    custorder.custorderdetails.FirstName = row["FirstName"].ToString();
+                    custorder.custorderdetails.LastName = row["LastName"].ToString();
+                    custorderlist.Add(custorder);
+                }
+                return custorderlist;
+            }
+        }
+
         public void AddCustomer(Customer cust)
         {
-            
+
             string conStr = ConfigurationManager.ConnectionStrings["ShopProjectSV"].ConnectionString;
             using (SqlConnection con = new SqlConnection(conStr))
             {
