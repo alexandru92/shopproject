@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataContracts.Models
 {
-    public class OrderDetails
+    public class OrderDetail
     {
         public int OrderDetailID { get; set; }
         public int ProductID { get; set; }

@@ -1,5 +1,4 @@
-﻿using DataContracts.Models.IModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using DataContracts.Models;
 using System.Configuration;
@@ -9,12 +8,11 @@ using DataContracts;
 
 namespace DataAcces
 {
-    public class OrderRepository 
+    public class OrderRepository
     {
         LogHelper hlp = new LogHelper();
-        public List<CustomerOrder> getCustomerOrderbyid()
+        public List<CustomerOrder> getCustomerOrderbyid(int CustomerOrderID)
         {
-            
 
             string conStr = ConfigurationManager.ConnectionStrings["ShopProjectSV"].ConnectionString;
             DataTable table = null;
@@ -24,7 +22,8 @@ namespace DataAcces
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = "spGetAllCustomerOrderByID";
-                    cmd.Parameters.AddWithValue("@CustomerOrderID", 2);
+                    cmd.Parameters.AddWithValue("@CustomerOrderID", CustomerOrderID);
+                    //cmd.Parameters["CustomerOrderID"].Direction = ParameterDirection.Output;
                     try
                     {
                         if (con.State != ConnectionState.Open)
@@ -49,17 +48,15 @@ namespace DataAcces
                 foreach (DataRow row in table.Rows)
                 {
                     CustomerOrder custorder = new CustomerOrder();
-                    custorder.custorderdetails = new Customer();
-                    custorder.CustomerOrderID = Convert.ToInt32(row["CustomerOrderID"]);
+                    custorder.customerorderlistdetails = new Customer();
+                    custorder.customerorderlistdetails.FirstName = row["FirstName"].ToString();
+                    custorder.customerorderlistdetails.LastName = row["LastName"].ToString();
+                    custorder.customerorderlistdetails.PhoneNumber = row["PhoneNumber"].ToString();
                     custorder.Total = Convert.ToInt32(row["Total"]);
-                    custorder.custorderdetails.FirstName = row["FirstName"].ToString();
-                    custorder.custorderdetails.LastName = row["LastName"].ToString();
-                    custorder.custorderdetails.PhoneNumber = row["PhoneNumber"].ToString();
-
+                    custorderlist.Add(custorder);
                 }
                 return custorderlist;
             }
-            throw new NotImplementedException();
         }
         public void AddOrder(CustomerOrder customerOrder)
         {
@@ -67,7 +64,6 @@ namespace DataAcces
         }
         public void UpdateOrder(CustomerOrder customerOrder)
         {
-
         }
     }
 }

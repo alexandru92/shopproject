@@ -17,17 +17,17 @@ namespace BusinessLayer
         }
         public List<Customer> GetCustomer()
         {
-            CustomerRepository cust = new CustomerRepository();
+            CustomerRepository custrepo = new CustomerRepository();
             try
             {
-                cust.getCustomer();
+                custrepo.getCustomer();
 
             }
             catch (Exception ex)
             {
                 hlp.LogError(ex);
             }
-            return cust.getCustomer();
+            return custrepo.getCustomer();
         }
         public void AddCustomer(Customer cust)
         {

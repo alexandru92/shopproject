@@ -8,20 +8,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        
+        <div>
+            <asp:GridView AlternatingRowStyle-BackColor="Wheat" DataKeyNames="CustomerOrderID" PageSize="10" CellPadding="3" CellSpacing="1" ID="OrderGridView" AllowPaging="true" AutoGenerateColumns="false" EmptyDataText="Nu se vede nimic" ForeColor="#333333" GridLines="None" runat="server" OnPageIndexChanging="OrderGridView_PageIndexChanging">
+                <Columns>
+                 
+                    <%--<asp:BoundField DataField="OrderID" HeaderText="CustomerOrderID"></asp:BoundField>--%>
+                    <asp:BoundField DataField="Total" HeaderText="Total"></asp:BoundField>
+                     <asp:BoundField DataField="customerorderlistdetails.FirstName" HeaderText="FirstName"></asp:BoundField>
+                     <asp:BoundField DataField="customerorderlistdetails.LastName" HeaderText="LastName"></asp:BoundField>
+                     <asp:BoundField DataField="customerorderlistdetails.PhoneNumber" HeaderText="PhoneNumber"></asp:BoundField>
 
-        <asp:GridView AlternatingRowStyle-BackColor="Wheat" PageSize="10" CellPadding="3"  CellSpacing="1" ID="OrderGridView" AllowPaging="true" AutoGenerateColumns="false" EmptyDataText="Nu se vede nimic" ForeColor="#333333" GridLines="None" runat="server">
-
-            <Columns>
-                
-                <asp:BoundField DataField="CustomerOrderID" HeaderText="CustomerOrderID"></asp:BoundField>
-                <asp:BoundField DataField="Total" HeaderText="Total" SortExpression="Total"></asp:BoundField>
-                 <asp:BoundField DataField="custorderdetails.FirstName" HeaderText="FirstName"></asp:BoundField>
-                <asp:BoundField DataField="custorderdetails.LastName" HeaderText="LastName"></asp:BoundField>
-                <asp:BoundField DataField="custorderdetails.PhoneNumber" HeaderText="LastName"></asp:BoundField>
-            </Columns>
-            <EditRowStyle BackColor="#2461BF" />
+                </Columns>
+                <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White"></FooterStyle>
                 <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White"></HeaderStyle>
                 <PagerStyle HorizontalAlign="Center" BackColor="#2461BF" ForeColor="White"></PagerStyle>
@@ -31,8 +29,8 @@
                 <SortedAscendingHeaderStyle BackColor="#6D95E1"></SortedAscendingHeaderStyle>
                 <SortedDescendingCellStyle BackColor="#E9EBEF"></SortedDescendingCellStyle>
                 <SortedDescendingHeaderStyle BackColor="#4870BE"></SortedDescendingHeaderStyle>
-        </asp:GridView>
-    </div>
+            </asp:GridView>
+        </div>
     </form>
 </body>
 </html>

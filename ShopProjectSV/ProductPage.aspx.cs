@@ -40,6 +40,13 @@ namespace ShopProjectSV
         protected void AddProduct_Click(object sender, EventArgs e)
         {
             Product prod = new Product();
+            //if (IsPostBack)
+            //{
+            //    prodnametb.Text = "";
+            //    categorytb.Text = "";
+            //    descriptiontb.Text = "";
+            //    pricetb.Text = "";
+            //}
             try
             {
                 prod.Name = prodnametb.Text;

@@ -8,25 +8,24 @@ namespace BusinessLayer
 {
     public class OrderService : IOrderRepository
     {
-        CustomerOrder order = new CustomerOrder();
         LogHelper hlp = new LogHelper();
         public OrderRepository _orderRepository(OrderRepository orderrepo)
         {
             throw new NotImplementedException();
         }
-        public List<CustomerOrder> custorder()
+        public List<CustomerOrder> Getcustorder(int CustomerOrderID)
         {
+            List<CustomerOrder> custorder = new List<CustomerOrder>();
             OrderRepository orderrepo = new OrderRepository();
             try
             {
-                orderrepo.getCustomerOrderbyid();
+                custorder = orderrepo.getCustomerOrderbyid(CustomerOrderID);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 hlp.LogError(ex);
             }
-            return orderrepo.getCustomerOrderbyid();
+            return custorder;
         }
-   
     }
 }

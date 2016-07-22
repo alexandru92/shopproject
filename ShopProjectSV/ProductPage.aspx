@@ -16,17 +16,26 @@
                 <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description"></asp:BoundField>
                 <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price"></asp:BoundField>
             </Columns>
-
+            <EditRowStyle BackColor="#2461BF" />
+                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White"></FooterStyle>
+                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White"></HeaderStyle>
+                <PagerStyle HorizontalAlign="Center" BackColor="#2461BF" ForeColor="White"></PagerStyle>
+                <RowStyle BackColor="#EFF3FB"></RowStyle>
+                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333"></SelectedRowStyle>
+                <SortedAscendingCellStyle BackColor="#F5F7FB"></SortedAscendingCellStyle>
+                <SortedAscendingHeaderStyle BackColor="#6D95E1"></SortedAscendingHeaderStyle>
+                <SortedDescendingCellStyle BackColor="#E9EBEF"></SortedDescendingCellStyle>
+                <SortedDescendingHeaderStyle BackColor="#4870BE"></SortedDescendingHeaderStyle>
         </asp:GridView>
         <ul id="addlistcss">
                 <li>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="prodnametb" runat="server" Width="147px"></asp:TextBox></li>
+            <asp:TextBox ID="prodnametb" runat="server" Width="147px" AutoCompleteType="Disabled"></asp:TextBox></li>
                 <li>Category &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="categorytb" runat="server" Width="147px"></asp:TextBox></li>
+            <asp:TextBox ID="categorytb" runat="server" Width="147px" AutoCompleteType="Disabled"></asp:TextBox></li>
                 <li>Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="descriptiontb" runat="server" Width="147px"></asp:TextBox></li>
+            <asp:TextBox ID="descriptiontb" runat="server" Width="147px" AutoCompleteType="Disabled"></asp:TextBox></li>
                 <li>Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            <asp:TextBox ID="pricetb" runat="server" Width="147px"></asp:TextBox></li>
+            <asp:TextBox ID="pricetb" runat="server" Width="147px" AutoCompleteType="Disabled"></asp:TextBox></li>
             </ul>
             <br />
             <asp:Button ID="AddProduct" runat="server" Text="Add Product" OnClick="AddProduct_Click"  />

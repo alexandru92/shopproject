@@ -1,13 +1,10 @@
 ﻿using DataContracts;
 using DataContracts.Models;
-using DataContracts.Models.iModels;
-using DataContracts.Models.IModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 
 namespace DataAcces
 {
@@ -49,6 +46,7 @@ namespace DataAcces
                 {
                     Customer cust = new Customer();
                     cust.address = new Address();
+                    cust.CustomerID = Convert.ToInt32(row["CustomerID"]);
                     cust.FirstName = row["FirstName"].ToString();
                     cust.LastName = row["LastName"].ToString();
                     cust.PhoneNumber = row["PhoneNumber"].ToString();
@@ -99,8 +97,13 @@ namespace DataAcces
                 foreach (DataRow row in table.Rows)
                 {
                     CustomerOrder custorder = new CustomerOrder();
-                    custorder.custorderdetails.FirstName = row["FirstName"].ToString();
-                    custorder.custorderdetails.LastName = row["LastName"].ToString();
+                    custorder.customerorderlistdetails = new Customer();
+                    custorder.CustomerID = Convert.ToInt32(row["CustomerID"]);
+                    custorder.CustomerOrderID = Convert.ToInt32(row["CustomerOrderID"]);
+                    custorder.Total = Convert.ToInt32(row["Total"]);
+                    custorder.customerorderlistdetails.FirstName = row["FirstName"].ToString();
+                    custorder.customerorderlistdetails.LastName = row["LastName"].ToString();
+                    custorder.customerorderlistdetails.PhoneNumber = row["PhoneNumber"].ToString();
                     custorderlist.Add(custorder);
                 }
                 return custorderlist;
