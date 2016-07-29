@@ -13,5 +13,6 @@ namespace DataContracts.Models
         public int CustomerOrderID { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
+        public Customer cust { get; set; }
     }
 }

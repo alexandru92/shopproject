@@ -12,7 +12,7 @@ namespace BusinessLayer
         
         public List<Product> GetProduct()
         {
-            ProductRepository prod = new ProductRepository();
+            InventoryRepo prod = new InventoryRepo();
             try
             {
                 prod.getProduct();
@@ -26,7 +26,7 @@ namespace BusinessLayer
         }
         public void AddProduct(Product prod)
         {
-            ProductRepository prodrepo = new ProductRepository();
+            InventoryRepo prodrepo = new InventoryRepo();
             try
             {
                 prodrepo.AddProduct(prod);

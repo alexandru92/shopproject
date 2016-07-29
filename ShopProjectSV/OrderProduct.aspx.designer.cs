@@ -10,7 +10,7 @@
 namespace ShopProjectSV {
     
     
-    public partial class Customers {
+    public partial class ProductPage {
         
         /// <summary>
         /// form1 control.
@@ -22,129 +22,93 @@ namespace ShopProjectSV {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// CustomerGridView control.
+        /// customeridlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView CustomerGridView;
+        protected global::System.Web.UI.WebControls.Label customeridlbl;
         
         /// <summary>
-        /// getSelectedDetailsbtn control.
+        /// customernamelbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button getSelectedDetailsbtn;
+        protected global::System.Web.UI.WebControls.Label customernamelbl;
         
         /// <summary>
-        /// vieworderedproducts control.
+        /// ProductGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button vieworderedproducts;
+        protected global::System.Web.UI.WebControls.GridView ProductGridView;
         
         /// <summary>
-        /// neworderbtn control.
+        /// orderprodbtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button neworderbtn;
+        protected global::System.Web.UI.WebControls.Button orderprodbtn;
         
         /// <summary>
-        /// gridviewSelectedCustomerRow control.
+        /// noqtyerrorlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridviewSelectedCustomerRow;
+        protected global::System.Web.UI.WebControls.Label noqtyerrorlbl;
         
         /// <summary>
-        /// gridvieworderedproducts control.
+        /// nocustomerselectederror control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridvieworderedproducts;
+        protected global::System.Web.UI.WebControls.Label nocustomerselectederror;
         
         /// <summary>
-        /// fnametb control.
+        /// noproductselectedlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fnametb;
+        protected global::System.Web.UI.WebControls.Label noproductselectedlbl;
         
         /// <summary>
-        /// lnametb control.
+        /// nocustomersessionlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lnametb;
+        protected global::System.Web.UI.WebControls.Label nocustomersessionlbl;
         
         /// <summary>
-        /// datebirthtb control.
+        /// zeroqtynochklbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox datebirthtb;
+        protected global::System.Web.UI.WebControls.Label zeroqtynochklbl;
         
         /// <summary>
-        /// phonenumbertb control.
+        /// multichkandnoqtylbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox phonenumbertb;
-        
-        /// <summary>
-        /// citytb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox citytb;
-        
-        /// <summary>
-        /// streettb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox streettb;
-        
-        /// <summary>
-        /// countrytb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox countrytb;
-        
-        /// <summary>
-        /// AddCustomer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddCustomer;
+        protected global::System.Web.UI.WebControls.Label multichkandnoqtylbl;
     }
 }

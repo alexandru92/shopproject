@@ -1,17 +1,14 @@
 ﻿using DataContracts;
 using DataContracts.Models;
-using DataContracts.Models.iModels;
-using DataContracts.Models.IModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 
 namespace DataAcces
 {
-    public class ProductRepository
+    public class InventoryRepo
     {
         LogHelper hlp = new LogHelper();
         public List<Product> getProduct()
@@ -50,6 +47,7 @@ namespace DataAcces
                 foreach (DataRow row in table.Rows)
                 {
                     Product prod = new Product();
+                    prod.ProductID = Convert.ToInt32(row["ProductID"]);
                     prod.Name= row["Name"].ToString();
                     prod.Description = row["Description"].ToString();
                     prod.Category = row["Category"].ToString();

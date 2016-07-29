@@ -1,5 +1,5 @@
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataContracts\bin\Debug\DataContracts.dll
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataContracts\bin\Debug\DataContracts.pdb
-c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataContracts\obj\Debug\DataContracts.csprojResolveAssemblyReference.cache
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataContracts\obj\Debug\DataContracts.dll
 c:\users\alexandru.petreus\documents\visual studio 2015\Projects\ShopProjectSV\DataContracts\obj\Debug\DataContracts.pdb
+C:\Users\alexandru.petreus\Documents\Visual Studio 2015\Projects\ShopProjectSV\DataContracts\obj\Debug\DataContracts.csprojResolveAssemblyReference.cache

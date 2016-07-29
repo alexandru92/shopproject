@@ -67,7 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Customers.aspx" />
-    <Content Include="Order.aspx" />
+    <Content Include="AddProduct.aspx" />
+    <Content Include="Inventory.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -77,7 +78,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProductPage.aspx" />
+    <Content Include="OrderProduct.aspx" />
+    <Content Include="Style\GridStyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -88,19 +90,26 @@
     <Compile Include="Customers.aspx.designer.cs">
       <DependentUpon>Customers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Order.aspx.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
+    <Compile Include="AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Order.aspx.designer.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
+    <Compile Include="AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ProductPage.aspx.cs">
-      <DependentUpon>ProductPage.aspx</DependentUpon>
+    <Compile Include="Inventory.aspx.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProductPage.aspx.designer.cs">
-      <DependentUpon>ProductPage.aspx</DependentUpon>
+    <Compile Include="Inventory.aspx.designer.cs">
+      <DependentUpon>Inventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderProduct.aspx.cs">
+      <DependentUpon>OrderProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderProduct.aspx.designer.cs">
+      <DependentUpon>OrderProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

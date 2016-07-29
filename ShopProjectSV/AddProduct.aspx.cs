@@ -5,7 +5,7 @@ using System.Web.UI.WebControls;
 
 namespace ShopProjectSV
 {
-    public partial class ProductPage : System.Web.UI.Page
+    public partial class Order : System.Web.UI.Page
     {
         LogHelper hlp = new LogHelper();
         ProductService prodserv = null;
@@ -17,36 +17,19 @@ namespace ShopProjectSV
                 FillProductGrid();
             }
         }
-
         private void FillProductGrid()
         {
             ProductGridView.DataSource = prodserv.GetProduct();
             ProductGridView.DataBind();
-
         }
-        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void ProductGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-
             ProductGridView.PageIndex = e.NewPageIndex;
-            FillProductGrid();
-
+            ProductGridView.DataBind();
         }
-        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            prodserv.GetProduct();
-            FillProductGrid();
-        }
-
         protected void AddProduct_Click(object sender, EventArgs e)
         {
             Product prod = new Product();
-            //if (IsPostBack)
-            //{
-            //    prodnametb.Text = "";
-            //    categorytb.Text = "";
-            //    descriptiontb.Text = "";
-            //    pricetb.Text = "";
-            //}
             try
             {
                 prod.Name = prodnametb.Text;
@@ -60,6 +43,21 @@ namespace ShopProjectSV
                 hlp.LogError(ex);
             }
             FillProductGrid();
+        }
+
+        protected void ProductGridView_DataBound(object sender, EventArgs e)
+        {
+            //Hide gridview ProductID & InventoryID
+            GridView grview = (GridView)sender;
+            if (grview.HeaderRow != null && grview.HeaderRow.Cells.Count > 0)
+            {
+                grview.HeaderRow.Cells[0].Visible = false;
+
+            }
+            foreach (GridViewRow row in ProductGridView.Rows)
+            {
+                row.Cells[0].Visible = false;
+            }
         }
     }
 }

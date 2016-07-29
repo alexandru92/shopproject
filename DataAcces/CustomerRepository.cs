@@ -60,7 +60,7 @@ namespace DataAcces
             }
         }
 
-        public List<CustomerOrder> getOrderByCustomerID()
+        public List<CustomerOrder> getOrderByCustomerID(int CustomerID)
         {
             string conStr = ConfigurationManager.ConnectionStrings["ShopProjectSV"].ConnectionString;
             DataTable table = null;
@@ -70,7 +70,7 @@ namespace DataAcces
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = "spGetAllOrdersByCustomerID";
-                    //cmd.Parameters.AddWithValue("@CustomerOrderID");
+                    cmd.Parameters.AddWithValue("@CustomerID", CustomerID);
                     try
                     {
                         if (con.State != ConnectionState.Open)
@@ -91,15 +91,12 @@ namespace DataAcces
                 }
 
                 List<CustomerOrder> custorderlist = new List<CustomerOrder>();
-
-                //DateTime date = new DateTime();
-                //string formatdate = date.ToString("dd-MM-yyyy");
                 foreach (DataRow row in table.Rows)
                 {
                     CustomerOrder custorder = new CustomerOrder();
                     custorder.customerorderlistdetails = new Customer();
                     custorder.CustomerID = Convert.ToInt32(row["CustomerID"]);
-                    custorder.CustomerOrderID = Convert.ToInt32(row["CustomerOrderID"]);
+                    //custorder.CustomerOrderID = Convert.ToInt32(row["CustomerOrderID"]);
                     custorder.Total = Convert.ToInt32(row["Total"]);
                     custorder.customerorderlistdetails.FirstName = row["FirstName"].ToString();
                     custorder.customerorderlistdetails.LastName = row["LastName"].ToString();

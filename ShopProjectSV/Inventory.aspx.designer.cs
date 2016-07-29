@@ -10,7 +10,7 @@
 namespace ShopProjectSV {
     
     
-    public partial class ProductPage {
+    public partial class Inventory {
         
         /// <summary>
         /// form1 control.
@@ -22,57 +22,30 @@ namespace ShopProjectSV {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ProductGridView control.
+        /// InventoryGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView ProductGridView;
+        protected global::System.Web.UI.WebControls.GridView InventoryGridView;
         
         /// <summary>
-        /// prodnametb control.
+        /// noinventorynocheck control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox prodnametb;
+        protected global::System.Web.UI.WebControls.Label noinventorynocheck;
         
         /// <summary>
-        /// categorytb control.
+        /// inventorybtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox categorytb;
-        
-        /// <summary>
-        /// descriptiontb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox descriptiontb;
-        
-        /// <summary>
-        /// pricetb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox pricetb;
-        
-        /// <summary>
-        /// AddProduct control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddProduct;
+        protected global::System.Web.UI.WebControls.Button inventorybtn;
     }
 }

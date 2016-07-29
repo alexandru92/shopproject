@@ -43,6 +43,7 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerOrder.cs" />
+    <Compile Include="Models\IModels\AllCustomerOrderDetail.cs" />
     <Compile Include="Models\IModels\IAddress.cs" />
     <Compile Include="Models\IModels\ICustomer.cs" />
     <Compile Include="Models\IModels\ICustomerOrder.cs" />
