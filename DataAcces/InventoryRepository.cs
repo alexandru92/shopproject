@@ -10,7 +10,7 @@ namespace DataAcces
     public class InventoryRepository
     {
         LogHelper hlp = new LogHelper();
-        public void AddInventory(int productid, int quantity)
+        public void AddInventory(/*int productid, int quantity*/ Inventory inventory)
         {
 
             string conStr = ConfigurationManager.ConnectionStrings["ShopProjectSV"].ConnectionString;
@@ -18,11 +18,11 @@ namespace DataAcces
             {
                 using (SqlCommand cmd = con.CreateCommand())
                 {
-                    Inventory inventory = new Inventory();
+                    //Inventory inventory = new Inventory();
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = "spAddInventory";
-                    cmd.Parameters.AddWithValue("@ProductID", inventory.ProductID = productid);
-                    cmd.Parameters.AddWithValue("@Quantity", inventory.Quantity = productid);
+                    cmd.Parameters.AddWithValue("@ProductID", inventory.ProductID/* = productid*/);
+                    cmd.Parameters.AddWithValue("@Quantity", inventory.Quantity /*= productid*/);
                     try
                     {
                         if (con.State != ConnectionState.Open)
@@ -83,10 +83,43 @@ namespace DataAcces
                     inventory.prod.Name = row["Name"].ToString();
                     inventory.prod.Category = row["Category"].ToString();
                     inventory.prod.Description = row["Description"].ToString();
-                    inventory.prod.Price =Convert.ToInt32(row["Price"]);
+                    inventory.prod.Price = Convert.ToInt32(row["Price"]);
                     inventorylist.Add(inventory);
                 }
                 return inventorylist;
+            }
+        }
+
+        public void UpdateInventory(/*int productid, int quantity*/ Inventory inventory)
+        {
+
+            string conStr = ConfigurationManager.ConnectionStrings["ShopProjectSV"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = con.CreateCommand())
+                {
+                    //Inventory inventory = new Inventory();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spAddInventory";
+                    cmd.Parameters.AddWithValue("@ProductID", inventory.ProductID/* = productid*/);
+                    cmd.Parameters.AddWithValue("@Quantity", inventory.Quantity /*= productid*/);
+                    try
+                    {
+                        if (con.State != ConnectionState.Open)
+                        {
+                            con.Open();
+                        }
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        hlp.LogError(ex);
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+                }
             }
         }
     }

@@ -43,7 +43,9 @@
                 <SortedDescendingHeaderStyle BackColor="#4870BE"></SortedDescendingHeaderStyle>
             </asp:GridView>
         <asp:Label ID="noinventorynocheck" runat="server" Text=""></asp:Label>
+        <asp:Label ID="noproductchklbl" runat="server" Text=""></asp:Label>
         <asp:Button ID="inventorybtn" runat="server" Text="Add Inventory" OnClick="inventorybtn_Click" />
+
     </div>
     </form>
 </body>

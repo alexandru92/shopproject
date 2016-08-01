@@ -14,5 +14,6 @@ namespace DataContracts.Models
         public int Quantity { get; set; }
         public decimal Price { get; set; }
         public Customer cust { get; set; }
+        public Inventory inventory { get; set; }
     }
 }

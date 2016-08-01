@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using DataAcces;
 using System;
 using System.Web.UI.WebControls;
 
@@ -11,23 +12,19 @@ namespace ShopProjectSV
         InventoryService inventoryservice = new InventoryService();
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (IsPostBack == false)
             {
                 FillInventoryGrid();
             }
         }
         protected void FillInventoryGrid()
+
         {
             prodservice.GetProduct();
             InventoryGridView.DataBind();
             InventoryGridView.DataSource = inventoryservice.Getcustorder();
             InventoryGridView.DataBind();
         }
-
-
-
-
 
         protected void InventoryGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
@@ -66,24 +63,29 @@ namespace ShopProjectSV
                 bool check = true;
                 //if ((row.Cells[0].FindControl("prodinventorychk") as CheckBox).Checked != check && qtyinventory <= 0)
                 //{
-                //    string errmsg = "Please select a product and specify inventory";
+                //    string errmsg = "Please select a product and specify inventory minimum 1";
                 //    noinventorynocheck.Text = errmsg.ToString();
                 //}
-                ////else if ((row.Cells[0].FindControl("prodinventorychk") as CheckBox).Checked == check && qtyinventory >= 1)
+                //else if ((row.Cells[0].FindControl("prodinventorychk") as CheckBox).Checked == check && qtyinventory >= 1)
+                //{
+                //    string errmsg = "";
+                //    noinventorynocheck.Text = errmsg.ToString();
+                //}
+                ////if ((row.Cells[0].FindControl("prodinventorychk") as CheckBox).Checked != check && qtyinventory >= 1)
                 ////{
-                ////    string errmsg = "";
+                ////    string errmsg = "Please enter inventory minimum 1";
                 ////    noinventorynocheck.Text = errmsg.ToString();
                 ////}
-                //if ((row.Cells[0].FindControl("prodinventorychk") as CheckBox).Checked != check && qtyinventory >= 1)
-                //{
-                //    string errmsg = "Please enter inventory minimum 1";
-                //    noinventorynocheck.Text = errmsg.ToString();
-                //}
                 if ((row.Cells[0].FindControl("prodinventorychk") as CheckBox).Checked == check && qtyinventory >= 1)
                 {
                     try
                     {
-                        inventoryservice.AddInventory(prodid, qtyinventory);
+                        InventoryRepository invrepo = new InventoryRepository();
+                        DataContracts.Models.Inventory inv = new DataContracts.Models.Inventory();
+                        inv.ProductID = prodid;
+                        inv.Quantity = qtyinventory;
+                        inventoryservice.AddInventory(inv);/* inventoryservice.AddInventory(prodid, qtyinventory);*/
+
                     }
                     catch (Exception ex)
                     {
@@ -91,8 +93,17 @@ namespace ShopProjectSV
                     }
                     string errmsg = "Inventory added";
                     noinventorynocheck.Text = errmsg.ToString();
+
                 }
+
+                else if ((row.Cells[0].FindControl("prodinventorychk") as CheckBox).Checked != check && qtyinventory >= 0)
+                {
+                    string errmsg = "Please select a product and add inventory minimum 1";
+                    noinventorynocheck.Text = errmsg.ToString();
+                }
+
             }
+
         }
     }
 }

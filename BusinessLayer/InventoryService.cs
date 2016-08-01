@@ -26,11 +26,11 @@ namespace BusinessLayer
             return inventorylist;
         }
 
-        public void AddInventory(int productid, int quantity)
+        public void AddInventory(/*int productid, int quantity*/ Inventory inventory)
         {
             try
             {
-                inventoryrepo.AddInventory(quantity, productid);
+                inventoryrepo.AddInventory(inventory);
             }
             catch (Exception ex)
             {
